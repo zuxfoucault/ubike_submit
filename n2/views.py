@@ -26,13 +26,11 @@ class n2Request(generic.View):
                                 if addrKey == 'types' and 'administrative_area_level_1' in addrValue:
                                     return addrIter['long_name']
                                 if i == lenList:
-                                    print('administrative_area_level_1 is not is addr Json')
                                     raise ValueError
 
                     inputCity = chkCity(addrJson)
 
                     if inputCity != 'Taipei City':
-                        print('not ' + inputCity)
                         raise ValueError
 
                     message = {}
